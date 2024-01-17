@@ -1,0 +1,892 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*Estilos comunes a todo el sitio web*/
+
+body {
+	font-family: 'Lato', sans-serif; 
+	color: rgb(0, 59, 74);
+	font-weight: 400;
+	line-height: 1.5rem;
+	display: block;
+}
+
+a {
+	color: rgb(191, 12, 240);
+	text-decoration: none;
+	border-bottom: 1px dotted rgb(191, 12, 240);
+	padding-bottom: 0.2em;
+}
+
+a:hover {
+	color: rgb(0, 59, 74);
+	border-bottom: 1px dotted rgb(0, 59, 74);
+}
+
+
+
+/* Estilos del encabezado (común) */
+
+header {
+	background-color: rgb(255, 255, 255);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: grid;
+	align-items: center;
+	height: auto;
+}
+
+@media (min-width: 800px) {
+	header {
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+		
+	}
+}
+
+.logo {
+	grid-column: 1 / 2;
+	margin-top: 1rem;
+	margin-left: 1.5rem;
+	margin-bottom: 1rem;	
+}
+
+.nosub, .nosub:hover {
+	border-bottom: none;
+}
+
+.brand {
+	max-width: 100%;
+	max-height: 50px;
+	
+}
+
+.menu {
+	grid-column: 2 / 2;
+	text-align: right;
+	margin-right: 1rem;
+	font-size: 0.8rem;
+}
+
+nav {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+nav > ul {
+	list-style-type: none;
+}
+
+nav > ul > li {
+	display: inline-block;
+	height: 1rem;
+}
+
+nav > ul > li > a {
+	color: rgb(0, 59, 74);
+	text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+	color: rgb(191, 12, 240);
+	border-bottom: none;
+}
+
+.blogmenu {
+	padding-right: 1.25rem;
+	border-right: 0.1rem solid rgb(0, 59, 74);
+	padding-bottom: 0.3rem;
+}
+
+.vidmenu {
+	padding-left: 1rem
+}
+
+
+
+/*Estilos del pie de página (común)*/
+
+footer {
+	background-color: rgb(0, 59, 74);
+	margin: -1rem;
+	align-items: center;
+	height: auto;
+	color: rgb(255, 255, 255);
+	font-size: 0.6em;
+	text-align: center;
+	padding: 1.5rem;
+	line-height: 1.3em;
+}
+
+@media (max-width: 400px) {
+	
+	.logored {
+		max-height: 20px;
+	}
+}
+
+.pie1 .pie2 {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.redes {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.redes > li {
+	display: inline;
+}
+
+.footer {
+	text-transform: initial;
+	font-weight: 400;
+	padding-left: 0;
+}
+
+.footer > li {
+	display: block;
+	padding: 0.1em;
+}
+
+a.redes {
+	border-bottom: none;
+}
+
+a.redes:hover {
+	opacity: 0.7;
+}
+
+a.footer {
+	color: rgb(255, 255, 255);
+	border-bottom: none;
+}
+
+a.footer:hover {
+	color: rgb(229, 225, 254);
+}
+
+@media (min-width: 800px) {
+	footer {
+		display: grid;
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+	}
+	.pie1 {
+		grid-column: 1 / 2;
+		text-align: left
+	}
+	.pie2 {
+		grid-column: 2 / 2;
+		text-align: right;
+	}
+	ul.footer > li {
+		display: inline-block;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	ul.footer > li:not(:first-of-type) {
+		border-left: 1.3px solid rgb(255, 255, 255);
+	}
+}
+
+
+/* Estilos de index.html
+
+El lema: */
+
+main {
+	display: block;
+}
+
+.lema {
+	background-image: url("../img/hero-image-home.jpg");
+	background-size: cover;
+	background-position: center;
+	padding-left: 1.5rem;
+	padding-right: 1rem;
+	padding-top: 5.5rem;
+	padding-bottom: 5.5rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	margin-top: 75px;
+	max-width: 100%;	
+}
+
+@media (min-width: 800px) {
+	.lema > h1{
+		width: 100%;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+section.lema > h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+	font-size: 2.5rem;
+	line-height: 3rem;
+}
+
+
+/* Presentación y formulario: */
+
+.texto {
+	background-color: rgb(247, 247, 247);
+	margin: -1rem;
+	padding-left: 1.5rem;
+	padding-top: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 4rem;
+}
+
+@media (min-width: 800px) {
+	.presentacion {
+		width: 100%;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+		display: grid;
+	}
+	.presen1 {
+		grid-column: 1 / 2;
+		padding-right: 1em;
+	}
+	.presen2 {
+		grid-column: 2 / 2;
+	}
+	p.pform {
+		font-size: 0.6em;
+	}
+	p.checkbox {
+		font-size: 0.6em;
+	}
+	li.liform {
+		font-size: 0.8em;
+	}
+}
+
+
+h2 {
+	font-family: 'Noto Serif';
+	font-size: 2em;
+	line-height: 1.3em;
+	margin-bottom: 1em;
+}
+
+@media (max-width: 400px) {
+	.texto {
+		font-size: 0.8rem;
+		line-height: 1.3rem;
+	}
+}
+
+.form {
+	list-style: none;
+	padding:inherit;
+	margin-right: 1em;
+}
+
+ul.form > li {
+	padding-bottom: 0.75rem;
+}
+
+.datos {
+	display: block;
+	font-family: inherit;
+	color: rgb(158, 157, 171);
+	font-size: 100%;
+	border: 1px solid rgb(229, 225, 254);
+	border-radius: 0.2em;
+	padding-left: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	width: 100%;
+	margin-top: 0.2em;
+}
+
+.pform {
+	font-size: 0.8em;
+	line-height: 1.5em;
+}
+
+.checkbox {
+	display: flex;
+	font-size: 0.8em;
+	line-height: 1.5em;
+	padding-top: 1em;
+	align-items: center;
+}
+
+button {
+	font-family: inherit;
+	text-transform: uppercase;
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 59, 74);
+	padding: 0.5em;
+	border-color: rgb(0, 59, 74);
+	border-radius: 0.2em;
+	margin-top: 1em;	
+}
+
+button:hover {
+	background-color: rgb(191, 12, 240);
+	border-color: rgb(191, 12, 240);
+}
+
+
+/* Topics: */
+
+.topics {
+	background-color: rgb(229, 225, 254);
+	margin: -1rem;
+	padding-top: 2rem;
+	padding-right: 0.5rem;
+	padding-bottom: 4rem;
+}
+
+.tema {
+	padding-left: 1.5rem;
+	padding-right: 0.5rem;
+	padding-bottom: 3rem;
+}
+
+@media (min-width: 800px) {
+	.tema {
+		width: 100%;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+	
+h3 {
+	font-family: 'Noto Serif';
+	font-size: 1.5em;
+	line-height: 1.5em;
+	margin-top: 0;
+}
+
+@media (max-width: 400px) {
+	.topics {
+		font-size: 0.8rem;
+		line-height: 1.3rem;
+	}
+}
+
+div.tema > figure > img {
+	max-width: 100%;
+}
+
+figure {
+	padding-left: 0.5;
+	padding-right: 0.5em;
+	margin: 0;
+}
+
+figcaption {
+	font-size: 0.6em;
+	text-align: right;
+	padding: 0;
+	margin: 0;
+}
+
+a.boton {
+	font-size: 0.9em;
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 59, 74);
+	padding: 0.5em;
+	border-color: rgb(0, 59, 74);
+	border-radius: 0.2em;
+	margin-top: 1em;
+}
+
+a.boton:hover {
+	color: rgb(255, 255, 255);
+	background-color: rgb(191, 12, 240);
+	border-color: rgb(191, 12, 240);
+}
+
+.descripcion1, .descripcion2 > p {
+	padding-left: 0;
+}
+
+@media (min-width: 500px) {
+	.tema {
+		display: flex;
+	}
+	.tema > figure {
+		width: 33%;
+	}
+	.tema > div {
+		width: 67%;
+		align-self: center
+	}
+	.torcida-izq {
+		rotate: -5deg;
+	}
+	.descripcion1 {
+		grid-column: 3 / 3;
+		padding-left: 2rem;
+	}
+	.torcida-der {
+		grid-column: 3 / 3;
+		rotate: 5deg;
+		order: 1;
+	}
+	
+	.descripcion2 {
+		grid-column: 1 / 3;
+		padding-right: 2rem;
+	}
+}
+
+
+
+
+/*Estilos para blog.html*/
+
+main.texto {
+	padding-left: 1.5rem;
+	padding-right: 1rem;
+	padding-top: 2rem;
+	padding-bottom: 5.5rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	margin-top: 75px;
+	max-width: 100%;
+}
+
+h1 {
+	font-family: 'Noto Serif';
+	font-size: 2.5em;
+	line-height: 1.3em;
+	margin-bottom: 1em;
+	padding: 1rem;
+}
+
+article {
+	border: 1px solid rgb(229, 225, 254);
+	background-color: rgb(255, 255, 255);
+	margin-bottom: 2rem;
+}
+
+article > h2, p {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+article > h2 {
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+
+a.nada {
+	color: rgb(0, 59, 74);
+	border-bottom: none;
+}
+
+a.nada:hover {
+	color: rgb(191, 12, 240);
+	border-bottom: none;
+}
+
+.autor {
+	color: rgb(158, 157, 171);
+	margin-bottom: 0.25em;
+}
+
+p.nada {
+	margin: 0;
+	grid-column: 1;
+	grid-row: 1;
+}
+
+p.image {
+	font-size: 0.6em;
+	background-color: rgb(255, 255, 255, 0.5);
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	grid-column: 2;
+	grid-row: 7;
+	text-align: right;
+	align-self: center;
+}
+
+.img1 {
+	background-image: url("../img/estrategias-vida-activa.jpg");
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	max-width: 100%;
+	height: 200px;
+	width: auto;
+	padding: 0.5em;
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: 60% 40%;
+	grid-template-rows: repeat(7, 14.25%)
+}
+
+.img2 {
+	background-image: url("../img/desintoxicacion-digital.jpg");
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	max-width: 100%;
+	height: 200px;
+	width: auto;
+	padding: 0.5em;
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: 60% 40%;
+	grid-template-rows: repeat(7, 14.25%)
+}
+
+.img3 {
+	background-image: url("../img/conexion-mente-cuerpo.jpg");
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	max-width: 100%;
+	height: 200px;
+	width: auto;
+	padding: 0.5em;
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: 60% 40%;
+	grid-template-rows: repeat(7, 14.25%)
+}
+
+.img4 {
+	background-image: url("../img/alimentos-combaten-estres.jpg");
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	max-width: 100%;
+	height: 200px;
+	width: auto;
+	padding: 0.5em;
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: 60% 40%;
+	grid-template-rows: repeat(7, 14.25%)
+}
+
+.img5 {
+	background-image: url("../img/yoga-principiantes.jpg");
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	max-width: 100%;
+	height: 200px;
+	width: auto;
+	padding: 0.5em;
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: 60% 40%;
+	grid-template-rows: repeat(7, 14.25%)
+}
+
+.img6 {
+	background-image: url("../img/hidratacion.jpg");
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	max-width: 100%;
+	height: 200px;
+	width: auto;
+	padding: 0.5em;
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: 65% 35%;
+	grid-template-rows: repeat(7, 14.25%)
+}
+
+.img7 {
+	background-image: url("../img/importancia-sueno-salud.jpg");
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	max-width: 100%;
+	height: 200px;
+	width: auto;
+	padding: 0.5em;
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: repeat(7, 14.25%)
+}
+
+.menunum {
+	font-weight: 400;
+	text-align: center;
+	padding-left: 0;
+}
+
+.menunum > li > a {
+	border: 1.3px solid rgb(0, 59, 74);
+	background-color: rgb(255, 255, 255);
+	padding: 0.5em;
+	margin: 0.3em;
+	justify-content: center;
+	height: auto;
+}
+
+#selected {
+	color: rgb(255, 255, 255);
+	border: 1.3px solid rgb(191, 12, 240);
+	background-color: rgb(191, 12, 240);
+	padding: 0.5em;
+	justify-content: center;
+	height: auto;
+}
+
+
+.menunum > li > a:hover {
+	color: rgb(255, 255, 255);
+	border: 1.3px solid rgb(191, 12, 240);
+	background-color: rgb(191, 12, 240);
+	padding: 0.5em;
+	justify-content: center;
+	height: auto;
+}
+
+/* Adaptación a las pantallas más grandes de blog.html*/
+
+@media (min-width: 500px) {
+	main.texto {
+		font-size: 0.7rem;
+		line-height: 1.2rem;
+	}
+	.bloques {
+		display: grid;
+		grid-template-columns: 45% 45%;
+		grid-auto-rows: minmax(300px);
+		gap: 20px 20px;
+		margin-bottom: 4rem;
+		justify-content: center;
+	}
+	.bloques > article {
+		margin-bottom: 0;
+	}
+	h1 {
+		margin-bottom: 0.3em;	
+	}
+}
+
+@media (min-width: 800px) {
+	.bloques {
+		grid-template-columns: repeat(4, 20%);
+		grid-auto-rows: minmax(500px);
+		gap: 30px;
+		
+	}
+	.bloques article:nth-child(1) {
+		grid-column: 1 / 3;
+	}
+	.img1 {
+		height: 400px;
+		grid-template-columns: 80% 20%;
+	}
+	h1 {
+		margin-left: 2em;
+}
+}
+
+
+/* Estilos para entrada.html*/
+
+#miga {
+	padding-bottom: 2rem;
+}
+
+#miga > a {
+	color: rgb(0, 59, 74);
+	border-bottom: none;
+	font-size: 0.7rem;
+}
+
+#miga > a:hover {
+	color: rgb(191, 12, 240)
+}
+
+.titular {
+	background-color: rgb(229, 225, 254);
+	margin: 0.5rem;
+}
+
+.titular > h1 {
+	margin: 0;
+	padding-bottom: 0;
+	padding-left: 0.5rem;
+}
+
+#mini {
+	font-size: 0.7rem;
+	padding-bottom: 1rem;
+}
+
+.titular > img {
+	max-width: 100%;
+}
+
+.first {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+ul {
+	padding-left: 1.5rem;
+}
+
+blockquote {
+	border-left: 3px solid rgb(191, 12, 240);
+	margin-left: 0.5rem;
+	padding-left: 1rem;
+}
+
+/* Banners de Entrada.html */
+
+aside {
+	margin-bottom: 4rem;
+}
+
+aside > h2 {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5em;
+	padding-top: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+.banner {
+	background-color: rgb(255, 255, 255);
+	margin-bottom: 1.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.banner > h3 {
+	padding-left: 0.5rem;
+	padding-top: 0.5rem;
+	margin: 0;
+	font-size: 1.25em;
+}
+
+.banner > p {
+	margin-top: 0;
+}
+
+.categorias {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.categorias > li {
+	display: inline-flex;
+}
+
+.botonblanco {
+	color: rgb(0, 59, 74);
+	border: 1px solid rgb(0, 59, 74);
+	background-color: rgb(255, 255, 255);
+	padding: 0.3em;
+	margin: 0.3em;
+}
+
+.botonblanco:hover {
+	color: rgb(255, 255, 255);
+	background-color: rgb(191, 12, 240);
+	border-color: rgb(191, 12, 240);	
+}
+
+/*Adaptando a las pantallas entrada.html*/
+
+@media (min-width: 500px) {
+	.aside {
+		display: grid;
+		grid-template-columns: repeat(3, 30%);
+		gap: 30px;
+		justify-content: center;
+	}
+	.banner > .img2, .banner > .img3,.banner > .img4 {
+		max-height: 125px;
+	}
+}
+
+@media (min-width: 800px) {
+	.articulo {
+		width: 100%;
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.entrada {
+		display: grid;
+		grid-template-columns: 60% 30%;
+		gap: 30px;
+	}
+	.entrada > article {
+		grid-column: 1;
+	}
+	aside {
+		grid-column: 2;
+	}
+	.aside {
+		display: block;
+	}
+	aside > h2 {
+		margin-top: 0;
+		padding-top: 0;
+	}
+}
+
+
+/* Estilos para videos.html */
+
+
+
+iframe {
+	max-width: 100%;
+	max-height: 200px;
+	border: none;
+}
+
+.video {
+	padding-bottom: 1rem;
+}
+
+@media (min-width: 500px) {
+	.bloquevid {
+		display: grid;
+		grid-template-columns: 45% 45%;
+		grid-auto-rows: minmax(300px);
+		gap: 20px 20px;
+		margin-bottom: 4rem;
+		justify-content: center;
+	}
+	.bloques > article {
+		margin-bottom: 0;
+	}
+	h1 {
+		margin-bottom: 0.3em;	
+	}
+}
+
+@media (min-width: 800px) {
+	.bloquevid {
+		grid-template-columns: repeat(3, 30%);
+		grid-auto-rows: minmax(500px);
+		gap: 30px;
+	}
+	h1 {
+		margin-left: 2em;
+}
+}
